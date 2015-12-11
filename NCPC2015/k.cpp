@@ -1,7 +1,7 @@
 #include <cstdio>
 using namespace std;
 
-bool ok(int *dig,int v) {
+inline bool ok(int *dig,int v) {
 	if( v==0 ) return dig[0];
 	int need[10] = {};
 	while( v ) {
