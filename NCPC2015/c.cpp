@@ -19,16 +19,16 @@ int dfs(int nowAt) {
 		++ans;
 		return 1;
 	}
-	int cnt = 0, nohurt = 0;
+	int cnt = 0, IhavePicked = 0;
 	for(int i=0 ; i<G[nowAt].size() ; ++i) {
 		int res = dfs(G[nowAt][i]);
 		if( res==1 ) ++cnt;
 		else if( res==2 ) {
-			if( !nohurt ) nohurt = 1;
+			if( !IhavePicked ) IhavePicked = 1;
 			else --ans;
 		}
 	}
-	if( nohurt ) return 1;
+	if( IhavePicked ) return 1;
 	if( cnt>=2 ) return 0;
 	++ans;
 	return cnt==0? 1 : 2;
