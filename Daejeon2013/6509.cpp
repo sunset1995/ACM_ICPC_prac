@@ -6,9 +6,9 @@ using namespace std;
 
 vector<int> preprocess() {
 	vector<int> len;
-	for(long long y=1; y<=500000; ++y)
-		for(long long x=y+1;  ; ++x) {
-			long long a = 2*x*y, b = x*x - y*y;
+	for(int y=1; y<=500; ++y)
+		for(int x=y+1;  ; ++x) {
+			int a = 2*x*y, b = x*x - y*y;
 			if( a+b > 500000 ) break;
 			int w = min(a, b), h = max(a, b);
 			if( __gcd(w, h)!=1 ) continue;
