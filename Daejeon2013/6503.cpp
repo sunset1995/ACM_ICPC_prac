@@ -89,7 +89,6 @@ int main() {
 			ps.emplace_back(Point(x, y));
 		}
 		ps = convexHull(ps);
-		printf("%d\n", (int)ps.size());
 		printf("%.1f\n", findAnsx2(ps)/2.0);
 	}
 	return 0;
