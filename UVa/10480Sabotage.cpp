@@ -9,6 +9,7 @@ typedef pair<int,int> pii;
 class Dinic{
 private:
 	static const int maxN = 104;
+	static const int infF = 1023456789;
 	int cap [maxN][maxN];
 	int pipe[maxN][maxN];
 	vector<int> g[maxN];
@@ -80,7 +81,7 @@ public:
 
 		// max flow
 		while( bfsLabeling(s,t) )
-			while( dfsFindRoute(s,t,1023456789) )
+			while( dfsFindRoute(s,t,infF) )
 				;
 
 		// min cut
